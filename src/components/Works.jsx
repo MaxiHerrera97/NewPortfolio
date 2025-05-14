@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Bubbles from './Bubbles';
-import planificador from '../assets/PlanificadorFull.mp4';
-import planificadorimg from '../assets/default-thumbnail.jpg';
-import servicio from '../assets/ServicioApp.mp4'
-import login  from '../assets/LoginBasico.mp4'
-import sidebar from '../assets/Sidebar.mp4'
-import login2 from '../assets/Login.mp4'
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt } from 'react-icons/fa';
+import planificador from '../../public/PlanificadorFull.mp4';
+import servicio from '../../public/ServicioApp.mp4';
+import login  from '../../public/LoginBasico.mp4';
+import sidebar from '../../public/Sidebar.mp4';
+import login2 from '../../public/Login.mp4';
+import ZafraUsados from '../../public/ZafraUsados.mp4'
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaWordpress } from 'react-icons/fa';
 import { SiMysql, SiExpress, SiJavascript, SiTailwindcss, SiVuedotjs, SiVite } from 'react-icons/si';
 import { BsThreeDots } from 'react-icons/bs';
 import { DiMsqlServer } from 'react-icons/di';
@@ -51,6 +51,22 @@ const Works = () => {
       videoUrl: servicio,
       thumbnailUrl: servicio,
       githubUrl: 'https://github.com/MaxiHerrera97/ServicioApp',
+      
+    },
+    {
+      name: 'Pagina Web - Usados Zafra',
+      description: 'Pagina Web desarrollada con WordPress para la venta de maquinaria usada',
+      longDescription: `Pagina desarrollada para impulsar las ventas de maquinaria usada de la empresa
+      
+      Funcionalidades destacadas:
+      • Filtro para maquinarias
+      • Gestión de usuarios
+      • Dashboard Interactivo
+      • https://zafrausados.com.ar/`,
+      technologies: ['WordPress'],
+      videoUrl: ZafraUsados,
+      thumbnailUrl: ZafraUsados,
+      URL: 'https://zafrausados.com.ar/',
       
     }
   ];
@@ -151,6 +167,7 @@ const Works = () => {
     'JavaScript': <SiJavascript className="text-yellow-400" size={20} title="JavaScript" />,
     'TailwindCSS': <SiTailwindcss className="text-cyan-400" size={20} title="TailwindCSS" />,
     'Vite': <SiVite className="text-purple-400" size={20} title="Vite" />,
+    'WordPress':<FaWordpress className="text-black-400" size={20} title="WordPress"/>,
     '...': <BsThreeDots className="text-gray-400" size={20} title="Otra tecnología" />,
   };
 
@@ -194,6 +211,7 @@ const Works = () => {
               src={project.thumbnailUrl} 
               alt={`${project.name} preview`}
               className="object-cover w-full h-full"
+              loading="lazy"
               onError={() => handleImageError(uniqueId)}
             />
           ) : (
@@ -237,7 +255,7 @@ const Works = () => {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
               </svg>
-              GitHub
+              GitHub/URL
             </a>
           </div>
         </div>

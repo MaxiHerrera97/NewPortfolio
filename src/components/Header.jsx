@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Bubbles from './Bubbles';
-import profileBlack from '../assets/ProfileBlack.png';
-import profileWhite from '../assets/ProfileWhite.png';
+import profileBlack from '../../public/ProfileBlack.webp';
+import profileWhite from '../../public/ProfileWhite.webp';
 
 const Header = () => {
   const [isDark, setIsDark] = useState(false);
@@ -12,6 +12,11 @@ const Header = () => {
     });
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
     setIsDark(document.documentElement.classList.contains('dark'));
+    // Precargar ambas imágenes WebP
+    const img1 = new window.Image();
+    img1.src = profileBlack;
+    const img2 = new window.Image();
+    img2.src = profileWhite;
     return () => observer.disconnect();
   }, []);
 
@@ -62,7 +67,8 @@ const Header = () => {
           <img
             src={isDark ? profileBlack : profileWhite}
             alt="Profile"
-            className="w-full h-full rounded-full object-cover"
+            className="w-full h-full rounded-full object-cover transition-opacity duration-300"
+            loading="lazy"
           />
         </div>
       </div>
