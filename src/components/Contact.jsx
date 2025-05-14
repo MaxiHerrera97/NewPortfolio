@@ -30,7 +30,7 @@ const Contact = () => {
             <FaEnvelope size={20} /> Email
           </a>
           <a
-            href="https://wa.me/5491122334455"
+            href="https://wa.me/5493813686226"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg shadow transition-colors text-base md:text-lg"
