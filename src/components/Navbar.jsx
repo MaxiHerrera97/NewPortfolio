@@ -46,9 +46,9 @@ const Navbar = () => {
           {/* Menú normal en escritorio */}
           <nav className="hidden md:flex md:flex-row md:items-center md:justify-end md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none">
             <ul className="flex flex-row items-center gap-4 p-0 w-auto">
-              <li><a href="#works" onClick={e => handleNavClick(e, 'works')} className="block px-3 py-2 md:py-1 rounded-lg font-medium transition-colors hover:bg-blue-100 dark:hover:bg-blue-900/40 hover:text-blue-700 dark:hover:text-blue-300">Works</a></li>
-              <li><a href="#skills" onClick={e => handleNavClick(e, 'skills')} className="block px-3 py-2 md:py-1 rounded-lg font-medium transition-colors hover:bg-blue-100 dark:hover:bg-blue-900/40 hover:text-blue-700 dark:hover:text-blue-300">Skills</a></li>
-              <li><a href="#contact" onClick={e => handleNavClick(e, 'contact')} className="block px-3 py-2 md:py-1 rounded-lg font-medium transition-colors hover:bg-blue-100 dark:hover:bg-blue-900/40 hover:text-blue-700 dark:hover:text-blue-300">Contact</a></li>
+              <li><a href="#works" onClick={e => handleNavClick(e, 'works')} className="block px-3 py-2 md:py-1 rounded-lg font-medium transition-colors hover:bg-blue-500 dark:hover:bg-blue-900/40 hover:text-blue-700 dark:hover:text-blue-300">Works</a></li>
+              <li><a href="#skills" onClick={e => handleNavClick(e, 'skills')} className="block px-3 py-2 md:py-1 rounded-lg font-medium transition-colors hover:bg-blue-500 dark:hover:bg-blue-900/40 hover:text-blue-700 dark:hover:text-blue-300">Skills</a></li>
+              <li><a href="#contact" onClick={e => handleNavClick(e, 'contact')} className="block px-3 py-2 md:py-1 rounded-lg font-medium transition-colors hover:bg-blue-500 dark:hover:bg-blue-900/40 hover:text-blue-700 dark:hover:text-blue-300">Contact</a></li>
             </ul>
           </nav>
           {/* Botón de tema (oculto en móvil cuando el menú está abierto) */}
