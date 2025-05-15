@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md shadow-lg rounded-b-2xl transition-colors duration-300">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg transition-all duration-300">
         <section className="max-w-5xl px-4 md:px-6 mx-auto flex items-center h-16 md:h-20">
           <h1 className="text-xl md:text-2xl font-extrabold text-blue-600 tracking-tight drop-shadow-sm select-none">HMG</h1>
           <div className="flex-1"></div>
