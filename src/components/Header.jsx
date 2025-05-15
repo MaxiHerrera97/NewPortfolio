@@ -51,15 +51,17 @@ const Header = () => {
           }
         `}</style>
         <p className=" mb-2 text-black dark:text-gray-500 dark-text-mobile dark-text-desktop text-justify text-sm md:text-base">
-          FullStack Developer especializado en JavaScript moderno, con expertise en <span className='font-semibold'>React.js + Vite</span> para interfaces ultra-rápidas y <span className='font-semibold'>Node.js</span> para APIs escalables. Arquitecto de soluciones full-stack con:
+         🎯Full Stack Developer con enfoque en soluciones modernas, rápidas y escalables.
+          Especializado en <span className='font-semibold'>React.js + Vite </span> para interfaces ultra veloces y experiencia de usuario fluida, y en <span className='font-semibold'>Node.js + Express</span> para construir APIs robustas y eficientes.
         </p>
+        {/*<p>🛠️ Stack principal:</p>
         <ul className="list-disc list-inside text-black dark:text-gray-500 dark-text-mobile dark-text-desktop mb-2 pl-5 text-left md:text-justify text-sm md:text-base">
-          <li className="text-left"><span className="font-medium">Frontend:</span>HTML,JavaScript, React, Vite, TailwindCSS <span className="italic">(diseños responsive y UI/UX optimizadas)</span></li>
-          <li className="text-left"><span className="font-medium">Backend:</span> Node.js, Express, Axios, RESTful APIs</li>
-          <li className="text-left"><span className="font-medium">Bases de datos:</span> MySQL</li>
-        </ul>
-        <p className="italic text-black dark:text-gray-500 dark-text-mobile dark-text-desktop text-justify text-sm md:text-base">
-          Comprometido con código limpio, patrones de diseño y alto rendimiento.
+          <li className="text-left"><span className="font-medium">Frontend:</span> HTML, JavaScript, React, Vite, Tailwind CSS<span className="italic">(UI modernas, responsive y orientadas a UX)</span></li>
+          <li className="text-left"><span className="font-medium">Backend:</span> Node.js, Express, Axios, diseño de APIs RESTful bien estructuradas.</li>
+          <li className="text-left"><span className="font-medium">Bases de datos:</span> MySQL – consultas optimizadas y estructuras bien normalizadas.</li>
+        </ul>*/}
+        <p className=" text-black dark:text-gray-500 dark-text-mobile dark-text-desktop text-justify text-sm md:text-base">
+         🧠 Apasionado por el código limpio, buenas prácticas, patrones de diseño y el rendimiento en cada capa del desarrollo.
         </p>
       </div>
       <div className="relative z-10 flex justify-center md:justify-end mt-8 md:mt-0">
