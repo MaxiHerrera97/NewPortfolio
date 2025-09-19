@@ -1,27 +1,38 @@
 import React from 'react';
 import Bubbles from './Bubbles';
-import { FaHtml5, FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa';
-import { SiTailwindcss, SiJavascript, SiVite, SiMysql, SiExpress, SiSequelize, SiAxios } from 'react-icons/si';
+import { FaHtml5, FaReact, FaNodeJs, FaGitAlt, FaCss3Alt } from 'react-icons/fa';
+import { SiTailwindcss, SiJavascript, SiVite, SiMysql, SiExpress, SiSequelize, SiAxios, SiTypescript, SiRedux, SiNextdotjs, SiNestjs, SiDotnet } from 'react-icons/si';
 
 const skills = [
   {
-    category: 'FrontEnd',
+    category: 'Frontend',
     items: [
-      { name: 'HTML', icon: <FaHtml5 className="text-orange-500" size={40} /> },
-      { name: 'TailwindCSS', icon: <SiTailwindcss className="text-cyan-400" size={40} /> },
-      { name: 'JavaScript', icon: <SiJavascript className="text-yellow-400" size={40} /> },
+      { name: 'JavaScript/TypeScript', icon: <SiJavascript className="text-yellow-400" size={40} /> },
       { name: 'React', icon: <FaReact className="text-blue-400" size={40} /> },
       { name: 'Vite', icon: <SiVite className="text-purple-400" size={40} /> },
+      { name: 'Redux', icon: <SiRedux className="text-purple-600" size={40} /> },
+      { name: 'Next.js', icon: <SiNextdotjs className="text-gray-800 dark:text-gray-200" size={40} /> },
+      { name: 'HTML5', icon: <FaHtml5 className="text-orange-500" size={40} /> },
+      { name: 'TailwindCSS', icon: <SiTailwindcss className="text-cyan-400" size={40} /> },
     ],
   },
   {
     category: 'Backend',
     items: [
-      { name: 'NodeJS', icon: <FaNodeJs className="text-green-600" size={40} /> },
-      { name: 'MySQL', icon: <SiMysql className="text-blue-700" size={40} /> },
+      { name: 'Node.js', icon: <FaNodeJs className="text-green-600" size={40} /> },
       { name: 'Express', icon: <SiExpress className="text-gray-700" size={40} /> },
-      { name: 'Sequelize', icon: <SiSequelize className="text-blue-500" size={40} /> },
-      { name: 'Axios', icon: <SiAxios className="text-blue-400" size={40} /> },
+      { name: 'Nest.js', icon: <SiNestjs className="text-red-500" size={40} /> },
+      { name: 'APIs REST', icon: <SiAxios className="text-blue-400" size={40} /> },
+      { name: 'C# - .NET Core', icon: <SiDotnet className="text-purple-600" size={40} /> },
+      { name: 'ASP.NET', icon: <SiDotnet className="text-blue-600" size={40} /> },
+    ],
+  },
+  {
+    category: 'Bases de Datos',
+    items: [
+      { name: 'MySQL', icon: <SiMysql className="text-blue-700" size={40} /> },
+      { name: 'Sequelize (ORM)', icon: <SiSequelize className="text-blue-500" size={40} /> },
+      { name: 'SQLServer', icon: <SiDotnet className="text-red-600" size={40} /> },
     ],
   },
   {
@@ -34,12 +45,12 @@ const skills = [
 
 const Skills = () => {
   const bubbles = [
-    { position: 'top-30 left-5', size: 'w-60 h-60', color: 'bg-red-300', animationDelay: 'animation-delay-3000' },
-    { position: 'top-30 right-10', size: 'w-80 h-80', color: 'bg-yellow-300', animationDelay: 'animation-delay-6000' },
+    { position: 'top-30 left-5', size: 'w-60 h-60', color: 'bg-red-500', animationDelay: 'animation-delay-3000' },
+    { position: 'top-30 right-10', size: 'w-80 h-80', color: 'bg-yellow-500', animationDelay: 'animation-delay-6000' },
   ];
 
   return (
-    <section id="skills" className="relative py-12 px-4 md:px-8 dark:bg-gray-800 overflow-hidden">
+    <section id="skills" className="relative py-12 px-4 md:px-8 overflow-hidden">
       <Bubbles bubbles={bubbles} />
       <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8">Habilidades</h2>
       <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

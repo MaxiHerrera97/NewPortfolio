@@ -21,12 +21,12 @@ const Header = () => {
   }, []);
 
   const bubbles = [
-    { position: 'top-20 left-10', size: 'w-40 h-40', color: 'bg-green-300', animationDelay: 'animation-delay-5000' },
-    { position: 'top-20 right-20', size: 'w-72 h-72', color: 'bg-blue-300', animationDelay: 'animation-delay-10000' },
+    { position: 'top-20 left-10', size: 'w-40 h-40', color: 'bg-green-500', animationDelay: 'animation-delay-5000' },
+    { position: 'top-20 right-20', size: 'w-72 h-72', color: 'bg-blue-500', animationDelay: 'animation-delay-10000' },
   ];
 
   return (
-    <div className="relative w-full min-h-screen grid grid-cols-1 md:grid-cols-2 items-center justify-between overflow-hidden px-4 md:px-10 py-8 md:py-0">
+    <div className="relative w-full min-h-screen grid grid-cols-1 md:grid-cols-2 items-start md:items-center justify-between overflow-hidden px-4 md:px-10 pt-20 md:pt-0 gap-0">
       <Bubbles bubbles={bubbles} />
       <div className="relative z-10 text-center md:text-left flex flex-col gap-1 md:ml-25">
         <h1 className="text-3xl md:text-4xl font-bold text-primary">Anthony Maximiliano</h1>
@@ -50,21 +50,15 @@ const Header = () => {
             }
           }
         `}</style>
-        <p className=" mb-2 text-black dark:text-gray-500 dark-text-mobile dark-text-desktop text-justify text-sm md:text-base">
+        <p className="mb-2 text-black dark:text-gray-500 dark-text-mobile dark-text-desktop text-justify text-sm md:text-base">
          🎯Full Stack Developer con enfoque en soluciones modernas, rápidas y escalables.
           Especializado en <span className='font-semibold'>React.js + Vite </span> para interfaces ultra veloces y experiencia de usuario fluida, y en <span className='font-semibold'>Node.js + Express</span> para construir APIs robustas y eficientes.
         </p>
-        {/*<p>🛠️ Stack principal:</p>
-        <ul className="list-disc list-inside text-black dark:text-gray-500 dark-text-mobile dark-text-desktop mb-2 pl-5 text-left md:text-justify text-sm md:text-base">
-          <li className="text-left"><span className="font-medium">Frontend:</span> HTML, JavaScript, React, Vite, Tailwind CSS<span className="italic">(UI modernas, responsive y orientadas a UX)</span></li>
-          <li className="text-left"><span className="font-medium">Backend:</span> Node.js, Express, Axios, diseño de APIs RESTful bien estructuradas.</li>
-          <li className="text-left"><span className="font-medium">Bases de datos:</span> MySQL – consultas optimizadas y estructuras bien normalizadas.</li>
-        </ul>*/}
-        <p className=" text-black dark:text-gray-500 dark-text-mobile dark-text-desktop text-justify text-sm md:text-base">
-         🧠 Apasionado por el código limpio, buenas prácticas, patrones de diseño y el rendimiento en cada capa del desarrollo.
+        <p className="text-black dark:text-gray-500 dark-text-mobile dark-text-desktop text-justify text-sm md:text-base">
+         🧠 Apasionado por el código limpio, buenas prácticas, patrones de diseño y el rendimiento en cada capa del desarrollo. Experiencia en metodologías ágiles como <span className='font-semibold'>Scrum</span> para trabajo colaborativo y entrega continua, además de conocimientos en <span className='font-semibold'>soporte IT</span> (hardware, software y redes).
         </p>
       </div>
-      <div className="relative z-10 flex justify-center md:justify-end mt-8 md:mt-0">
+      <div className="relative z-10 flex justify-center md:justify-end -mt-4 md:mt-0">
         <div className="w-80 h-80 md:w-100 md:h-100 flex items-center justify-center">
           <img
             src={isDark ? profileBlack : profileWhite}

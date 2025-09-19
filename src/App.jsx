@@ -3,9 +3,11 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Works from './components/Works';
 import Skills from './components/Skills';
+import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { FaWhatsapp } from 'react-icons/fa';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
         <Header />
         <Works />
         <Skills />
+        <Certifications />
         <Contact />
         <Footer />
       </div>
@@ -29,6 +32,7 @@ function App() {
       >
         <FaWhatsapp size={32} />
       </a>
+      <Analytics />
     </div>
   );
 }

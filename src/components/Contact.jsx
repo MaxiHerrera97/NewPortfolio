@@ -4,8 +4,8 @@ import { FaLinkedin, FaEnvelope, FaDownload, FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   const bubbles = [
-    { position: 'top-18 left-40', size: 'w-26 h-26', color: 'bg-purple-300', animationDelay: 'animation-delay-2000' },
-    { position: 'bottom-13 right-50', size: 'w-25 h-25', color: 'bg-pink-300', animationDelay: 'animation-delay-5000' },
+    { position: 'top-18 left-40', size: 'w-26 h-26', color: 'bg-purple-500', animationDelay: 'animation-delay-2000' },
+    { position: 'bottom-13 right-50', size: 'w-25 h-25', color: 'bg-pink-500', animationDelay: 'animation-delay-5000' },
   ];
 
   return (

@@ -146,12 +146,12 @@ const Works = () => {
   ];
 
   const bubbles = [
-    { position: 'top-25 left-10', size: 'w-32 h-32', color: 'bg-red-300', animationDelay: 'animation-delay-2000' },
-    { position: 'top-40 right-10', size: 'w-40 h-40', color: 'bg-blue-200', animationDelay: 'animation-delay-4000' },
-    { position: 'bottom-20 left-20', size: 'w-52 h-52', color: 'bg-yellow-200', animationDelay: 'animation-delay-6000' },
-    { position: 'bottom-20 right-32', size: 'w-36 h-36', color: 'bg-pink-200', animationDelay: 'animation-delay-3000' },
-    { position: 'top-1/2 left-1/3', size: 'w-28 h-28', color: 'bg-green-200', animationDelay: 'animation-delay-5000' },
-    { position: 'top-1/4 right-1/4', size: 'w-24 h-24', color: 'bg-purple-200', animationDelay: 'animation-delay-7000' },
+    { position: 'top-25 left-10', size: 'w-32 h-32', color: 'bg-red-500', animationDelay: 'animation-delay-2000' },
+    { position: 'top-40 right-10', size: 'w-40 h-40', color: 'bg-blue-400', animationDelay: 'animation-delay-4000' },
+    { position: 'bottom-20 left-20', size: 'w-52 h-52', color: 'bg-yellow-500', animationDelay: 'animation-delay-6000' },
+    { position: 'bottom-20 right-32', size: 'w-36 h-36', color: 'bg-pink-500', animationDelay: 'animation-delay-3000' },
+    { position: 'top-1/2 left-1/3', size: 'w-28 h-28', color: 'bg-green-500', animationDelay: 'animation-delay-5000' },
+    { position: 'top-1/4 right-1/4', size: 'w-24 h-24', color: 'bg-purple-500', animationDelay: 'animation-delay-7000' },
   ];
 
   // Mapeo de tecnología a ícono
