@@ -20,7 +20,7 @@ const Header = () => {
 
   const bubbles = [
     { position: 'top-20 left-10', size: 'w-40 h-40', color: 'bg-green-500', animationDelay: 'animation-delay-5000' },
-    { position: 'top-20 right-20', size: 'w-72 h-72', color: 'bg-blue-500', animationDelay: 'animation-delay-10000' },
+    
     { position: 'top-40 left-1/4', size: 'w-32 h-32', color: 'bg-purple-500', animationDelay: 'animation-delay-3000' },
     { position: 'top-60 right-1/3', size: 'w-48 h-48', color: 'bg-pink-500', animationDelay: 'animation-delay-7000' },
     { position: 'bottom-20 left-1/2', size: 'w-56 h-56', color: 'bg-yellow-500', animationDelay: 'animation-delay-2000' },

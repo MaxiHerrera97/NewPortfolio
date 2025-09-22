@@ -65,16 +65,16 @@ const Navbar = () => {
       {isMenuOpen && (
         <nav className="fixed inset-0 z-[99999] bg-white dark:bg-gray-900 flex flex-col">
           <button
-            className="absolute top-6 right-6 p-2 rounded-lg bg-blue-100 dark:bg-blue-900/40 shadow focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="absolute top-6 right-6 p-2 rounded-lg bg-blue-100 dark:bg-blue-900/40 shadow focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800 dark:text-gray-200"
             onClick={() => setIsMenuOpen(false)}
             aria-label="Cerrar menú"
           >
             <FaTimes size={32} />
           </button>
           <ul className="flex flex-1 flex-col justify-center items-center gap-8 text-2xl font-semibold">
-            <li><a href="#works" onClick={e => {handleNavClick(e, 'works'); setIsMenuOpen(false);}} className="px-6 py-3 rounded-lg transition-colors hover:bg-blue-100 dark:hover:bg-blue-900/40 hover:text-blue-700 dark:hover:text-blue-300">Works</a></li>
-            <li><a href="#skills" onClick={e => {handleNavClick(e, 'skills'); setIsMenuOpen(false);}} className="px-6 py-3 rounded-lg transition-colors hover:bg-blue-100 dark:hover:bg-blue-900/40 hover:text-blue-700 dark:hover:text-blue-300">Skills</a></li>
-            <li><a href="#contact" onClick={e => {handleNavClick(e, 'contact'); setIsMenuOpen(false);}} className="px-6 py-3 rounded-lg transition-colors hover:bg-blue-100 dark:hover:bg-blue-900/40 hover:text-blue-700 dark:hover:text-blue-300">Contact</a></li>
+            <li><a href="#works" onClick={e => {handleNavClick(e, 'works'); setIsMenuOpen(false);}} className="px-6 py-3 rounded-lg transition-colors text-gray-800 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900/40 hover:text-blue-700 dark:hover:text-blue-300">Works</a></li>
+            <li><a href="#skills" onClick={e => {handleNavClick(e, 'skills'); setIsMenuOpen(false);}} className="px-6 py-3 rounded-lg transition-colors text-gray-800 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900/40 hover:text-blue-700 dark:hover:text-blue-300">Skills</a></li>
+            <li><a href="#contact" onClick={e => {handleNavClick(e, 'contact'); setIsMenuOpen(false);}} className="px-6 py-3 rounded-lg transition-colors text-gray-800 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900/40 hover:text-blue-700 dark:hover:text-blue-300">Contact</a></li>
           </ul>
         </nav>
       )}

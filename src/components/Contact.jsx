@@ -7,12 +7,12 @@ const Contact = () => {
     { position: 'top-18 left-40', size: 'w-26 h-26', color: 'bg-purple-500', animationDelay: 'animation-delay-2000' },
     { position: 'bottom-13 right-50', size: 'w-25 h-25', color: 'bg-pink-500', animationDelay: 'animation-delay-5000' },
     { position: 'top-30 left-1/4', size: 'w-32 h-32', color: 'bg-blue-500', animationDelay: 'animation-delay-3000' },
-    { position: 'top-50 right-1/3', size: 'w-28 h-28', color: 'bg-green-500', animationDelay: 'animation-delay-7000' },
+   
     { position: 'bottom-30 left-1/2', size: 'w-24 h-24', color: 'bg-yellow-500', animationDelay: 'animation-delay-1000' },
-    { position: 'top-10 right-1/5', size: 'w-30 h-30', color: 'bg-red-500', animationDelay: 'animation-delay-6000' },
-    { position: 'bottom-50 left-1/3', size: 'w-22 h-22', color: 'bg-indigo-500', animationDelay: 'animation-delay-4000' },
-    { position: 'top-70 right-1/4', size: 'w-26 h-26', color: 'bg-orange-500', animationDelay: 'animation-delay-8000' },
-    { position: 'bottom-10 left-1/5', size: 'w-20 h-20', color: 'bg-teal-500', animationDelay: 'animation-delay-2000' },
+   
+   
+    
+    
   ];
 
   return (

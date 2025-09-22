@@ -15,8 +15,8 @@ const Footer = () => {
   }, []);
 
   const bubbles = [
-    { position: 'bottom-30 left-10', size: 'w-10 h-10', color: 'bg-gray-600', animationDelay: 'animation-delay-4000' },
-    { position: 'bottom-20 right-20', size: 'w-80 h-80', color: 'bg-gray-800', animationDelay: 'animation-delay-7000' },
+    { position: 'bottom-30 left-10', size: 'w-20 h-20', color: 'bg-gray-600', animationDelay: 'animation-delay-4000' },
+    { position: 'bottom-20 right-20', size: 'w-40 h-40', color: 'bg-gray-800', animationDelay: 'animation-delay-7000' },
   ];
 
   return (
