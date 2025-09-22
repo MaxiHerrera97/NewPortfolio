@@ -152,9 +152,9 @@ const Works = () => {
     { position: 'bottom-20 right-32', size: 'w-36 h-36', color: 'bg-pink-500', animationDelay: 'animation-delay-3000' },
     { position: 'top-1/2 left-1/3', size: 'w-28 h-28', color: 'bg-green-500', animationDelay: 'animation-delay-5000' },
     { position: 'top-1/4 right-1/4', size: 'w-24 h-24', color: 'bg-purple-500', animationDelay: 'animation-delay-7000' },
-    { position: 'top-10 left-1/2', size: 'w-44 h-44', color: 'bg-indigo-500', animationDelay: 'animation-delay-1000' },
+    
     { position: 'bottom-10 right-1/2', size: 'w-38 h-38', color: 'bg-orange-500', animationDelay: 'animation-delay-9000' },
-    { position: 'top-60 left-1/5', size: 'w-30 h-30', color: 'bg-teal-500', animationDelay: 'animation-delay-4000' },
+    { position: 'top-20 left-1/5', size: 'w-30 h-30', color: 'bg-teal-500', animationDelay: 'animation-delay-4000' },
     { position: 'bottom-40 left-1/4', size: 'w-42 h-42', color: 'bg-rose-500', animationDelay: 'animation-delay-6000' },
   ];
 
