@@ -6,8 +6,9 @@ import login  from '../../public/LoginBasico.mp4';
 import sidebar from '../../public/Sidebar.mp4';
 import login2 from '../../public/Login.mp4';
 import ZafraUsados from '../../public/ZafraUsados.mp4'
+import chequeos from '../../public/ChequeosApp.mp4'
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaWordpress } from 'react-icons/fa';
-import { SiMysql, SiExpress, SiJavascript, SiTailwindcss, SiVuedotjs, SiVite } from 'react-icons/si';
+import { SiMysql, SiExpress, SiJavascript, SiTailwindcss, SiVuedotjs, SiVite, SiNginx, SiPm2 } from 'react-icons/si';
 import { BsThreeDots } from 'react-icons/bs';
 import { DiMsqlServer } from 'react-icons/di';
 
@@ -54,6 +55,24 @@ const Works = () => {
       
     },
     {
+      name: 'Chequeos de Máquinas',
+      description: 'Aplicación para gestión de chequeos técnicos y su historial.',
+      longDescription: `Sistema integral para Zafra S.A. que permite registrar y consultar chequeos de máquinas.
+
+Características principales:
+• Gestión de chequeos por tipo y modelo de máquina
+• Selección de clientes desde base externa (servicios_zafra)
+• Historial de chequeos con filtros (fecha, cliente, tipo, modelo, serie)
+• Formularios optimizados con validaciones y guardado en lote
+• Despliegue con Nginx y backend Node (PM2), CORS y proxy /api
+• Variables de entorno y build con Vite
+• Repositorio`,
+      technologies: ['React', 'Vite', 'Node.js', 'Express', 'MySQL', 'Nginx', 'PM2', 'JavaScript', 'TailwindCSS'],
+      videoUrl: chequeos,
+      thumbnailUrl: chequeos,
+      githubUrl: 'https://github.com/MaxiHerrera97/ChequeosApp'
+    },
+    {
       name: 'Pagina Web - Usados Zafra',
       description: 'Pagina Web desarrollada con WordPress para la venta de maquinaria usada',
       longDescription: `Pagina desarrollada para impulsar las ventas de maquinaria usada de la empresa
@@ -68,7 +87,8 @@ const Works = () => {
       thumbnailUrl: ZafraUsados,
       githubUrl: 'https://zafrausados.com.ar/',
       
-    }
+    },
+    
   ];
 
   // Proyectos personales
@@ -163,6 +183,7 @@ const Works = () => {
     'React': <FaReact className="text-blue-400" size={20} title="React" />,
     'Node.js': <FaNodeJs className="text-green-600" size={20} title="Node.js" />,
     'MySQL': <SiMysql className="text-blue-700" size={20} title="MySQL" />,
+    'mysql2': <SiMysql className="text-blue-600" size={20} title="mysql2" />,
     'SQLServer': <DiMsqlServer className='text-blue-700' size={20} title='SQLServer'/>,
     'Vue.js': <SiVuedotjs className="text-green-500" size={20} title="Vue.js" />,
     'Express': <SiExpress className="text-gray-700" size={20} title="Express" />,
@@ -171,6 +192,8 @@ const Works = () => {
     'JavaScript': <SiJavascript className="text-yellow-400" size={20} title="JavaScript" />,
     'TailwindCSS': <SiTailwindcss className="text-cyan-400" size={20} title="TailwindCSS" />,
     'Vite': <SiVite className="text-purple-400" size={20} title="Vite" />,
+    'Nginx': <SiNginx className="text-green-700" size={20} title="Nginx" />,
+    'PM2': <SiPm2 className="text-orange-600" size={20} title="PM2" />,
     'WordPress':<FaWordpress className="text-black-400" size={20} title="WordPress"/>,
     '...': <BsThreeDots className="text-gray-400" size={20} title="Otra tecnología" />,
   };
@@ -274,7 +297,7 @@ const Works = () => {
       <div className="max-w-6xl mx-auto">
         {/* 1. Proyectos de Zafra S.A. */}
         <div className="mb-12">
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-800 dark:text-blue-300">Proyectos Zafra S.A.</h3>
+          <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-800 dark:text-blue-300">Proyectos Full Stack Zafra S.A.</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {zafraProjects.map((project, index) => (
               <ProjectCard key={index} project={project} index={index} />
