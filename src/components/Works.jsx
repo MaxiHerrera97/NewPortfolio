@@ -332,7 +332,7 @@ Características principales:
   return (
     <section id="works" className="relative py-12 px-4 md:px-8 overflow-hidden">
       <Bubbles bubbles={bubbles} />
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8 title-black">Trabajos y Proyectos</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8 title-black">Proyectos</h2>
       <div className="max-w-6xl mx-auto">
         {/* 1. Proyectos de Zafra S.A. */}
         <div className="mb-12">
