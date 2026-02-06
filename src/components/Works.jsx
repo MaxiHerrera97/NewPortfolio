@@ -5,8 +5,10 @@ import servicio from '../../public/ServicioApp.mp4';
 import login  from '../../public/LoginBasico.mp4';
 import sidebar from '../../public/Sidebar.mp4';
 import login2 from '../../public/Login.mp4';
-import ZafraUsados from '../../public/ZafraUsados.mp4'
-import chequeos from '../../public/ChequeosApp.mp4'
+import ZafraUsados from '../../public/ZafraUsados.mp4';
+import chequeos from '../../public/ChequeosApp.mp4';
+import emtel from '../../public/EmtelProyect.mp4';
+import Barberia from '../../public/TuEstiloBarberia.mp4';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaWordpress } from 'react-icons/fa';
 import { SiMysql, SiExpress, SiJavascript, SiTailwindcss, SiVuedotjs, SiVite, SiNginx, SiPm2 } from 'react-icons/si';
 import { BsThreeDots } from 'react-icons/bs';
@@ -94,8 +96,45 @@ Características principales:
   // Proyectos personales
   const personalProjects = [
     {
+      name: 'EN DESARROLLO - Landing para barberia mas turnero FullStack',
+      description: '',
+      longDescription: `Sistema web integral para gestión de turnos en barberías.
+      Características principales:
+      • Reserva de turnos online con selección de barbero.
+      • Sistema de bloqueo temporal (hold) para evitar doble reserva de turnos
+      • Panel de administración con roles (admin / barbero)
+      • Gestión y seguimiento de estados de turnos.
+      • Autenticación segura mediante JWT
+      • Comunicación cliente–servidor mediante API REST
+      • Pantalla de visualización de turnos en tiempo real (modo display)
+      • Ranking mensual de barberos según turnos realizados`,
+      technologies: ['React', 'Node.js', 'Express', 'MySQL', 'Vite', 'JavaScript', 'TailwindCSS'],
+      videoUrl: Barberia,
+      thumbnailUrl: Barberia,
+      githubUrl: '#',
+      
+    },
+    {
+      name: 'EN DESARROLLO - Emtel - Internet Municipal',
+      description: '',
+      longDescription: `Sistema web integral desarrollado para EMTel que permite la gestión centralizada de información operativa mediante una plataforma moderna, segura y fácil de usar.
+      
+      Características principales:
+      • Gestión y administración de usuarios
+      • Autenticación segura mediante JWT
+      • Interfaz web moderna y responsiva
+      • Comunicación cliente–servidor mediante API REST
+      • Persistencia de datos en base MySQL
+      • Arquitectura escalable cliente / servidor`,
+      technologies: ['React', 'Node.js', 'Express', 'MySQL', 'Vite', 'JavaScript', 'TailwindCSS', 'JWT'],
+      videoUrl: emtel,
+      thumbnailUrl: emtel,
+      githubUrl: '#',
+      
+    },
+    {
       name: 'Login Basico',
-      description: 'Descripción breve del primer proyecto personal frontend.',
+      description: '',
       longDescription: `Proyecto de autenticación básica desarrollado para practicar conceptos fundamentales de frontend.
       
       Características:
@@ -111,7 +150,7 @@ Características principales:
     },
     {
       name: 'Login + Register',
-      description: 'Descripción breve del segundo proyecto personal frontend.',
+      description: '',
       longDescription: `Segunda iteración del proyecto de login con mejoras significativas.
       
       Mejoras implementadas:
@@ -307,7 +346,7 @@ Características principales:
 
         {/* 2. Proyectos personales */}
         <div>
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-800 dark:text-blue-300">Proyectos Personales</h3>
+          <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-800 dark:text-blue-300">Proyectos FullStack - Personales</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {personalProjects.map((project, index) => (
               <ProjectCard key={index} project={project} index={index + zafraProjects.length} />
