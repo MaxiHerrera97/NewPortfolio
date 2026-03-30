@@ -96,7 +96,7 @@ Características principales:
   // Proyectos personales
   const personalProjects = [
     {
-      name: 'EN DESARROLLO - Landing para barberia mas turnero FullStack',
+      name: 'Landing para barberia mas turnero FullStack',
       description: '',
       longDescription: `Sistema web integral para gestión de turnos en barberías.
       Características principales:
@@ -114,24 +114,7 @@ Características principales:
       githubUrl: '#',
       
     },
-    {
-      name: 'EN DESARROLLO - Emtel - Internet Municipal',
-      description: '',
-      longDescription: `Sistema web integral desarrollado para EMTel que permite la gestión centralizada de información operativa mediante una plataforma moderna, segura y fácil de usar.
-      
-      Características principales:
-      • Gestión y administración de usuarios
-      • Autenticación segura mediante JWT
-      • Interfaz web moderna y responsiva
-      • Comunicación cliente–servidor mediante API REST
-      • Persistencia de datos en base MySQL
-      • Arquitectura escalable cliente / servidor`,
-      technologies: ['React', 'Node.js', 'Express', 'MySQL', 'Vite', 'JavaScript', 'TailwindCSS', 'JWT'],
-      videoUrl: emtel,
-      thumbnailUrl: emtel,
-      githubUrl: '#',
-      
-    },
+    
     {
       name: 'Login Basico',
       description: '',
