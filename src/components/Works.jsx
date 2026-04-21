@@ -7,8 +7,8 @@ import sidebar from '../../public/Sidebar.mp4';
 import login2 from '../../public/Login.mp4';
 import ZafraUsados from '../../public/ZafraUsados.mp4';
 import chequeos from '../../public/ChequeosApp.mp4';
-import emtel from '../../public/EmtelProyect.mp4';
 import Barberia from '../../public/TuEstiloBarberia.mp4';
+import emtel from '../../public/EmtelProyect.mp4'
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaWordpress } from 'react-icons/fa';
 import { SiMysql, SiExpress, SiJavascript, SiTailwindcss, SiVuedotjs, SiVite, SiNginx, SiPm2 } from 'react-icons/si';
 import { BsThreeDots } from 'react-icons/bs';
@@ -96,14 +96,13 @@ Características principales:
   // Proyectos personales
   const personalProjects = [
     {
-      name: 'Landing para barberia mas turnero FullStack',
+      name: 'Aplicacion SaaS para Barberias - BarberFlow',
       description: '',
       longDescription: `Sistema web integral para gestión de turnos en barberías.
       Características principales:
       • Reserva de turnos online con selección de barbero.
-      • Sistema de bloqueo temporal (hold) para evitar doble reserva de turnos
-      • Panel de administración con roles (admin / barbero)
-      • Gestión y seguimiento de estados de turnos.
+      • Configuracion completa de la landing page desde el panel de administración (servicios, precios, horarios, etc)
+      • Gestion y seguimiento de finanzas (ingresos por turno, comisiones, etc)
       • Autenticación segura mediante JWT
       • Comunicación cliente–servidor mediante API REST
       • Pantalla de visualización de turnos en tiempo real (modo display)
@@ -111,10 +110,34 @@ Características principales:
       technologies: ['React', 'Node.js', 'Express', 'MySQL', 'Vite', 'JavaScript', 'TailwindCSS'],
       videoUrl: Barberia,
       thumbnailUrl: Barberia,
-      githubUrl: '#',
+      githubUrl: 'https://tuestilobarberia.go.hmgdev.com.ar',
       
     },
-    
+    {
+    name: 'Programa municipal Emtel',
+    description: '',
+    longDescription: `APP desarrollada para el municipio de Tafi Viejo
+
+      Características principales:
+      • Autenticación segura mediante JWT con middleware de protección de rutas.
+      • Sistema de roles con acceso restringido para administradores.
+      • Gestión completa de usuarios.
+      • Integración con almacenamiento (Cloudflare R2).
+      • Manejo de archivos y documentos con rutas dedicadas.
+      • Estructura modular basada en rutas (auth, user, admin, upload, files).
+      • Conexión a base de datos MySQL mediante mysql2.
+      • Manejo de datos geoespaciales (GeoJSON) para cobertura o zonas.`,
+    technologies: [
+      'Node.js',
+      'Express',
+      'JWT',
+      'Cloudflare R2',
+      'JavaScript'
+    ],
+    videoUrl: emtel,
+    thumbnailUrl: emtel,
+    githubUrl: 'https://conectatafi.com.ar',
+  },
     {
       name: 'Login Basico',
       description: '',
