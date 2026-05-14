@@ -9,6 +9,7 @@ import ZafraUsados from '../../public/ZafraUsados.mp4';
 import chequeos from '../../public/ChequeosApp.mp4';
 import Barberia from '../../public/TuEstiloBarberia.mp4';
 import emtel from '../../public/EmtelProyect.mp4'
+import NegocioPro from '../../public/NegocioPro.mp4';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaWordpress } from 'react-icons/fa';
 import { SiMysql, SiExpress, SiJavascript, SiTailwindcss, SiVuedotjs, SiVite, SiNginx, SiPm2 } from 'react-icons/si';
 import { BsThreeDots } from 'react-icons/bs';
@@ -112,6 +113,21 @@ Características principales:
       thumbnailUrl: Barberia,
       githubUrl: 'https://tuestilobarberia.go.hmgdev.com.ar',
       
+    },
+    {
+    name: 'Aplicación SaaS para Negocios - Negocio Pro',
+    description: 'Sistema web SaaS para gestionar ventas, stock, caja y clientes en comercios minoristas.',
+    longDescription: `Plataforma web integral para kioscos, despensas, almacenes y minimercados.
+    Características principales:
+    • Punto de venta (POS) rápido con lector de código de barras.
+    • Gestión de inventario con alertas de stock bajo y movimientos de stock.
+    • Control de caja diaria (apertura, cierre, ingresos y egresos).
+    • Administración de fiados y cuentas corrientes por cliente.
+    • Arquitectura multi-tenant con acceso seguro por negocio/sucursal.`,
+    technologies: ['React', 'Node.js', 'Express', 'MySQL', 'Vite', 'JavaScript', 'TailwindCSS'],
+    videoUrl: NegocioPro,
+    thumbnailUrl: NegocioPro,
+    githubUrl: 'https://github.com/MaxiHerrera97/NegocioPro',
     },
     {
     name: 'Programa municipal Emtel',
