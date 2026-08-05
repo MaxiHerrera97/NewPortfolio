@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import Bubbles from './Bubbles';
 import profileImage from '../../public/PerfilOscuro.png';
 
+const HERO_TITLE = 'Full Stack Developer | QA & Testing';
+
 const Header = () => {
   const [isDark, setIsDark] = useState(true);
 
@@ -31,147 +33,24 @@ const Header = () => {
     <div className="relative w-full min-h-screen grid grid-cols-1 md:grid-cols-2 items-start md:items-center justify-between overflow-hidden px-4 md:px-10 pt-20 md:pt-0 gap-4 md:gap-8">
       <Bubbles bubbles={bubbles} />
       <div className="relative z-10 text-center md:text-left flex flex-col gap-1 md:ml-16">
-        <h1 className="text-3xl md:text-4xl font-bold text-primary">Anthony Maximiliano</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-primary">Maximiliano Gabriel Herrera</h1>
         <div className="w-full md:w-auto inline-block">
-          <motion.h2 
+          <motion.h2
             className="text-xl md:text-2xl mb-0 font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 0.6 }}
-            >
-              F
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 0.7 }}
-            >
-              u
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 0.8 }}
-            >
-              l
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 0.9 }}
-            >
-              l
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 1.0 }}
-            >
-              S
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 1.1 }}
-            >
-              t
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 1.2 }}
-            >
-              a
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 1.3 }}
-            >
-              c
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 1.4 }}
-            >
-              k
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 1.5 }}
-            >
-              {" "}
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 1.6 }}
-            >
-              D
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 1.7 }}
-            >
-              e
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 1.8 }}
-            >
-              v
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 1.9 }}
-            >
-              e
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 2.0 }}
-            >
-              l
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 2.1 }}
-            >
-              o
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 2.2 }}
-            >
-              p
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 2.3 }}
-            >
-              e
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 2.4 }}
-            >
-              r
-            </motion.span>
+            {HERO_TITLE.split('').map((char, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.1, delay: 0.6 + i * 0.05 }}
+              >
+                {char === ' ' ? ' ' : char}
+              </motion.span>
+            ))}
           </motion.h2>
         </div>
         <style jsx>{`
@@ -190,11 +69,10 @@ const Header = () => {
           }
         `}</style>
         <p className="mb-2 text-black dark:text-gray-500 dark-text-mobile dark-text-desktop text-justify text-sm md:text-base">
-         🎯Full Stack Developer con enfoque en soluciones modernas, rápidas y escalables.
-          Especializado en <span className='font-semibold'>React.js + Vite </span> para interfaces ultra veloces y experiencia de usuario fluida, y en <span className='font-semibold'>Node.js + Express</span> para construir APIs robustas y eficientes.
+         🎯 Desarrollador Full Stack con experiencia en aplicaciones web modernas usando <span className='font-semibold'>React.js + Vite</span> y <span className='font-semibold'>Node.js + Express</span>, además de soluciones backend en <span className='font-semibold'>C# .NET Core</span>.
         </p>
         <p className="text-black dark:text-gray-500 dark-text-mobile dark-text-desktop text-justify text-sm md:text-base">
-         🧠 Apasionado por el código limpio, buenas prácticas, patrones de diseño y el rendimiento en cada capa del desarrollo. Experiencia en metodologías ágiles como <span className='font-semibold'>Scrum</span> para trabajo colaborativo y entrega continua, además de conocimientos en <span className='font-semibold'>soporte IT</span> (hardware, software y redes).
+         🧠 Práctica sostenida en aseguramiento de calidad: pruebas manuales y funcionales, testing de <span className='font-semibold'>APIs REST y Webhooks con Postman</span>, y tests unitarios en frontend y backend. Mi perfil de desarrollador me permite abordar el testing entendiendo el código por dentro: sé dónde suelen fallar las integraciones, cómo reproducir errores y cómo documentarlos para que se corrijan rápido.
         </p>
       </div>
       <div className="relative z-10 flex justify-center md:justify-end -mt-4 md:mt-0">

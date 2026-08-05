@@ -28,9 +28,9 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div className="text-center md:text-left">
-            <h3 className="text-lg font-semibold mb-4 title-black">Anthony Maximiliano</h3>
+            <h3 className="text-lg font-semibold mb-4 title-black">Maximiliano Gabriel Herrera</h3>
             <p className="text-sm text-dark-gray">
-              FullStack Developer especializado en JavaScript moderno y desarrollo web.
+              Full Stack Developer con práctica en QA & Testing de APIs.
             </p>
           </div>
           <div className="text-center">
@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-200 dark:border-gray-700 pt-6 text-center">
-          <p className="text-sm text-dark-gray">Copyright © {new Date().getFullYear()} Anthony Maximiliano. Todos los derechos reservados.</p>
+          <p className="text-sm text-dark-gray">Copyright © {new Date().getFullYear()} Maximiliano Gabriel Herrera. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

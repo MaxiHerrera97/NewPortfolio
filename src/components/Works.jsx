@@ -1,104 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Bubbles from './Bubbles';
-import planificador from '../../public/PlanificadorFull.mp4';
-import servicio from '../../public/ServicioApp.mp4';
 import login  from '../../public/LoginBasico.mp4';
 import sidebar from '../../public/Sidebar.mp4';
 import login2 from '../../public/Login.mp4';
-import ZafraUsados from '../../public/ZafraUsados.mp4';
-import chequeos from '../../public/ChequeosApp.mp4';
 import Barberia from '../../public/TuEstiloBarberia.mp4';
 import emtel from '../../public/EmtelProyect.mp4'
 import NegocioPro from '../../public/NegocioPro.mp4';
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaWordpress } from 'react-icons/fa';
-import { SiMysql, SiExpress, SiJavascript, SiTailwindcss, SiVuedotjs, SiVite, SiNginx, SiPm2 } from 'react-icons/si';
+import BarberiaThumb from '../../public/thumbnails/TuEstiloBarberia.jpg';
+import NegocioProThumb from '../../public/thumbnails/NegocioPro.jpg';
+import emtelThumb from '../../public/thumbnails/EmtelProyect.jpg';
+import loginThumb from '../../public/thumbnails/LoginBasico.jpg';
+import login2Thumb from '../../public/thumbnails/Login.jpg';
+import sidebarThumb from '../../public/thumbnails/Sidebar.jpg';
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaVial } from 'react-icons/fa';
+import { SiMysql, SiExpress, SiJavascript, SiTailwindcss, SiVite, SiJest, SiTestinglibrary } from 'react-icons/si';
 import { BsThreeDots } from 'react-icons/bs';
-import { DiMsqlServer } from 'react-icons/di';
 
 const Works = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);
   const [imageErrors, setImageErrors] = useState({});
 
-  // Proyectos de Zafra S.A.
-  const zafraProjects = [
-    {
-      name: 'Planificador Semanal',
-      description: 'Aplicación para la gestión y planificación de servicios externos semanales .',
-      longDescription: `Sistema integral desarrollado para Zafra S.A. que permite la gestión eficiente de servicios semanales.
-      
-      Características principales:
-      • Gestión de servicios y recursos
-      • Planificación semanal automatizada
-      • Interfaz intuitiva para usuarios
-      • Reportes y estadísticas en tiempo real
-      • Integración con sistemas existentes
-      • Repositorio`,
-      technologies: ['React', 'Node.js', 'MySQL', 'Vite', 'JavaScript', 'CSS'],
-      videoUrl: planificador,
-      thumbnailUrl: planificador,
-      githubUrl: 'https://github.com/MaxiHerrera97/PlanificadorSemanal',
-      
-    },
-    {
-      name: 'Gestor de Servicios',
-      description: 'Aplicación para la gestión y planificación de servicios internos.',
-      longDescription: `Plataforma completa para la gestión de servicios internos desarrollada para Zafra S.A.
-      
-      Funcionalidades destacadas:
-      • Dashboard interactivo
-      • Gestión de usuarios y permisos
-      • Seguimiento de servicios en tiempo real
-      • Sistema de notificaciones
-      • Exportación de datos`,
-      technologies: ['React', 'Node.js', 'MySQL', 'SQLServer', 'Vite', 'JavaScript', 'TailwindCSS'],
-      videoUrl: servicio,
-      thumbnailUrl: servicio,
-      githubUrl: 'https://github.com/MaxiHerrera97/ServicioApp',
-      
-    },
-    {
-      name: 'Chequeos de Máquinas',
-      description: 'Aplicación para gestión de chequeos técnicos y su historial.',
-      longDescription: `Sistema integral para Zafra S.A. que permite registrar y consultar chequeos de máquinas.
-
-Características principales:
-• Gestión de chequeos por tipo y modelo de máquina
-• Selección de clientes desde base externa (servicios_zafra)
-• Historial de chequeos con filtros (fecha, cliente, tipo, modelo, serie)
-• Formularios optimizados con validaciones y guardado en lote
-• Despliegue con Nginx y backend Node (PM2), CORS y proxy /api
-• Variables de entorno y build con Vite
-• Repositorio`,
-      technologies: ['React', 'Vite', 'Node.js', 'Express', 'MySQL', 'Nginx', 'PM2', 'JavaScript', 'TailwindCSS'],
-      videoUrl: chequeos,
-      thumbnailUrl: chequeos,
-      githubUrl: 'https://github.com/MaxiHerrera97/ChequeosApp'
-    },
-    {
-      name: 'Pagina Web - Usados Zafra',
-      description: 'Pagina Web desarrollada con WordPress para la venta de maquinaria usada',
-      longDescription: `Pagina desarrollada para impulsar las ventas de maquinaria usada de la empresa
-      
-      Funcionalidades destacadas:
-      • Filtro para maquinarias
-      • Gestión de usuarios
-      • Dashboard Interactivo
-      • https://zafrausados.com.ar/`,
-      technologies: ['WordPress'],
-      videoUrl: ZafraUsados,
-      thumbnailUrl: ZafraUsados,
-      githubUrl: 'https://zafrausados.com.ar/',
-      
-    },
-    
-  ];
-
   // Proyectos personales
   const personalProjects = [
     {
       name: 'Aplicacion SaaS para Barberias - BarberFlow',
-      description: '',
+      description: 'Suite de tests con Jest + React Testing Library en el frontend y Jest + Supertest en el backend.',
       longDescription: `Sistema web integral para gestión de turnos en barberías.
       Características principales:
       • Reserva de turnos online con selección de barbero.
@@ -107,31 +34,33 @@ Características principales:
       • Autenticación segura mediante JWT
       • Comunicación cliente–servidor mediante API REST
       • Pantalla de visualización de turnos en tiempo real (modo display)
-      • Ranking mensual de barberos según turnos realizados`,
-      technologies: ['React', 'Node.js', 'Express', 'MySQL', 'Vite', 'JavaScript', 'TailwindCSS'],
+      • Ranking mensual de barberos según turnos realizados
+      • Testing: componentes React cubiertos con Jest + React Testing Library, endpoints de la API cubiertos con Jest + Supertest`,
+      technologies: ['React', 'Node.js', 'Express', 'MySQL', 'Vite', 'JavaScript', 'TailwindCSS', 'Jest', 'React Testing Library', 'Supertest'],
       videoUrl: Barberia,
-      thumbnailUrl: Barberia,
+      thumbnailUrl: BarberiaThumb,
       githubUrl: 'https://tuestilobarberia.go.hmgdev.com.ar',
-      
+
     },
     {
     name: 'Aplicación SaaS para Negocios - Negocio Pro',
-    description: 'Sistema web SaaS para gestionar ventas, stock, caja y clientes en comercios minoristas.',
+    description: 'Sistema web SaaS para gestionar ventas, stock, caja y clientes en comercios minoristas, con tests en frontend y backend.',
     longDescription: `Plataforma web integral para kioscos, despensas, almacenes y minimercados.
     Características principales:
     • Punto de venta (POS) rápido con lector de código de barras.
     • Gestión de inventario con alertas de stock bajo y movimientos de stock.
     • Control de caja diaria (apertura, cierre, ingresos y egresos).
     • Administración de fiados y cuentas corrientes por cliente.
-    • Arquitectura multi-tenant con acceso seguro por negocio/sucursal.`,
-    technologies: ['React', 'Node.js', 'Express', 'MySQL', 'Vite', 'JavaScript', 'TailwindCSS'],
+    • Arquitectura multi-tenant con acceso seguro por negocio/sucursal.
+    • Testing: componentes React cubiertos con Jest + React Testing Library, endpoints de la API cubiertos con Jest + Supertest`,
+    technologies: ['React', 'Node.js', 'Express', 'MySQL', 'Vite', 'JavaScript', 'TailwindCSS', 'Jest', 'React Testing Library', 'Supertest'],
     videoUrl: NegocioPro,
-    thumbnailUrl: NegocioPro,
+    thumbnailUrl: NegocioProThumb,
     githubUrl: 'https://github.com/MaxiHerrera97/NegocioPro',
     },
     {
     name: 'Programa municipal Emtel',
-    description: '',
+    description: 'API de backend con tests de endpoints mediante Jest + Supertest.',
     longDescription: `APP desarrollada para el municipio de Tafi Viejo
 
       Características principales:
@@ -142,23 +71,26 @@ Características principales:
       • Manejo de archivos y documentos con rutas dedicadas.
       • Estructura modular basada en rutas (auth, user, admin, upload, files).
       • Conexión a base de datos MySQL mediante mysql2.
-      • Manejo de datos geoespaciales (GeoJSON) para cobertura o zonas.`,
+      • Manejo de datos geoespaciales (GeoJSON) para cobertura o zonas.
+      • Testing: endpoints de la API cubiertos con Jest + Supertest`,
     technologies: [
       'Node.js',
       'Express',
       'JWT',
       'Cloudflare R2',
-      'JavaScript'
+      'JavaScript',
+      'Jest',
+      'Supertest'
     ],
     videoUrl: emtel,
-    thumbnailUrl: emtel,
+    thumbnailUrl: emtelThumb,
     githubUrl: 'https://conectatafi.com.ar',
   },
     {
       name: 'Login Basico',
       description: '',
       longDescription: `Proyecto de autenticación básica desarrollado para practicar conceptos fundamentales de frontend.
-      
+
       Características:
       • Diseño responsive
       • Validación de formularios
@@ -166,15 +98,15 @@ Características principales:
       • Persistencia de sesión`,
       technologies: ['HTML', 'CSS'],
       videoUrl: login,
-      thumbnailUrl: '/images/thumbnails/personal-project1.jpg',
+      thumbnailUrl: loginThumb,
       githubUrl: 'https://github.com/MaxiHerrera97/LoginBasico',
-      
+
     },
     {
       name: 'Login + Register',
       description: '',
       longDescription: `Segunda iteración del proyecto de login con mejoras significativas.
-      
+
       Mejoras implementadas:
       • Interfaz más moderna
       • Mejor experiencia de usuario
@@ -182,15 +114,15 @@ Características principales:
       • Integración con TailwindCSS`,
       technologies: ['HTML', 'TailwindCSS', 'JavaScript'],
       videoUrl: login2,
-      thumbnailUrl: '/images/thumbnails/personal-project2.jpg',
+      thumbnailUrl: login2Thumb,
       githubUrl: 'https://github.com/MaxiHerrera97/Login-Register',
-      
+
     },
     {
       name: 'Sidebar',
       description: 'Descripción breve del tercer proyecto personal frontend.',
       longDescription: `Componente de navegación lateral desarrollado con React.
-      
+
       Características:
       • Animaciones fluidas
       • Personalización completa
@@ -198,32 +130,10 @@ Características principales:
       • Integración con React Router`,
       technologies: ['React', 'CSS', 'JavaScript'],
       videoUrl: sidebar,
-      thumbnailUrl: '/images/thumbnails/personal-project3.jpg',
+      thumbnailUrl: sidebarThumb,
       githubUrl: 'https://github.com/MaxiHerrera97/Sidebar-ReactVite',
-      
-    },
-    {
-      name: 'Proximamente...',
-      description: '...',
-      longDescription: 'Proyecto en desarrollo...',
-      technologies: ['...', '...'],
-      videoUrl: '/videos/personal-project4.mp4',
-      thumbnailUrl: '/images/thumbnails/personal-project4.jpg',
-      githubUrl: '#',
-      
-    },
-  ];
 
-  // Experiencias laborales (para agregar después)
-  const workExperiences = [
-    
-    // Espacio para futuras experiencias
-    // {
-    //   company: 'BRACONGO SA',
-    //   year: '2023',
-    //   role: 'Software Engineer Mission',
-    //   description: 'Descripción del trabajo...',
-    // },
+    },
   ];
 
   const bubbles = [
@@ -245,17 +155,15 @@ Características principales:
     'Node.js': <FaNodeJs className="text-green-600" size={20} title="Node.js" />,
     'MySQL': <SiMysql className="text-blue-700" size={20} title="MySQL" />,
     'mysql2': <SiMysql className="text-blue-600" size={20} title="mysql2" />,
-    'SQLServer': <DiMsqlServer className='text-blue-700' size={20} title='SQLServer'/>,
-    'Vue.js': <SiVuedotjs className="text-green-500" size={20} title="Vue.js" />,
     'Express': <SiExpress className="text-gray-700" size={20} title="Express" />,
     'HTML': <FaHtml5 className="text-orange-500" size={20} title="HTML" />,
     'CSS': <FaCss3Alt className="text-blue-500" size={20} title="CSS" />,
     'JavaScript': <SiJavascript className="text-yellow-400" size={20} title="JavaScript" />,
     'TailwindCSS': <SiTailwindcss className="text-cyan-400" size={20} title="TailwindCSS" />,
     'Vite': <SiVite className="text-purple-400" size={20} title="Vite" />,
-    'Nginx': <SiNginx className="text-green-700" size={20} title="Nginx" />,
-    'PM2': <SiPm2 className="text-orange-600" size={20} title="PM2" />,
-    'WordPress':<FaWordpress className="text-black-400" size={20} title="WordPress"/>,
+    'Jest': <SiJest className="text-red-600" size={20} title="Jest" />,
+    'React Testing Library': <SiTestinglibrary className="text-red-500" size={20} title="React Testing Library" />,
+    'Supertest': <FaVial className="text-purple-500" size={20} title="Supertest" />,
     '...': <BsThreeDots className="text-gray-400" size={20} title="Otra tecnología" />,
   };
 
@@ -354,26 +262,15 @@ Características principales:
   return (
     <section id="works" className="relative py-12 px-4 md:px-8 overflow-hidden">
       <Bubbles bubbles={bubbles} />
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8 title-black">Proyectos</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 title-black">Proyectos</h2>
+      <p className="text-center text-dark-gray mb-8 text-sm md:text-base">
+        Proyectos personales full stack, varios con su propia suite de tests
+      </p>
       <div className="max-w-6xl mx-auto">
-        {/* 1. Proyectos de Zafra S.A. */}
-        <div className="mb-12">
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-800 dark:text-blue-300">Proyectos Full Stack Zafra S.A.</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {zafraProjects.map((project, index) => (
-              <ProjectCard key={index} project={project} index={index} />
-            ))}
-          </div>
-        </div>
-
-        {/* 2. Proyectos personales */}
-        <div>
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-800 dark:text-blue-300">Proyectos FullStack - Personales</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {personalProjects.map((project, index) => (
-              <ProjectCard key={index} project={project} index={index + zafraProjects.length} />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {personalProjects.map((project, index) => (
+            <ProjectCard key={index} project={project} index={index} />
+          ))}
         </div>
       </div>
 

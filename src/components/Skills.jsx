@@ -1,9 +1,19 @@
 import React from 'react';
 import Bubbles from './Bubbles';
-import { FaHtml5, FaReact, FaNodeJs, FaGitAlt, FaCss3Alt, FaDatabase } from 'react-icons/fa';
-import { SiTailwindcss, SiJavascript, SiVite, SiMysql, SiExpress, SiSequelize, SiAxios, SiTypescript, SiRedux, SiNextdotjs, SiNestjs, SiDotnet } from 'react-icons/si';
+import { FaHtml5, FaReact, FaNodeJs, FaGitAlt, FaCss3Alt, FaDatabase, FaVial, FaCheckDouble, FaBug } from 'react-icons/fa';
+import { SiTailwindcss, SiJavascript, SiVite, SiMysql, SiExpress, SiSequelize, SiAxios, SiTypescript, SiRedux, SiNextdotjs, SiNestjs, SiDotnet, SiPostman, SiJest } from 'react-icons/si';
 
 const skills = [
+  {
+    category: 'Testing y QA',
+    items: [
+      { name: 'Postman', icon: <SiPostman className="text-orange-500" size={28} /> },
+      { name: 'Jest', icon: <SiJest className="text-red-600" size={28} /> },
+      { name: 'xUnit', icon: <FaVial className="text-purple-500" size={28} /> },
+      { name: 'Testing de APIs', icon: <FaCheckDouble className="text-teal-500" size={28} /> },
+      { name: 'Reporte de bugs', icon: <FaBug className="text-rose-500" size={28} /> },
+    ],
+  },
   {
     category: 'Frontend',
     items: [
